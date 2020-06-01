@@ -16,7 +16,7 @@ RUN apt-get install -y --no-install-recommends libtiff5
 
 RUN pip3 install --upgrade pip
 #RUN pip3 install numpy==1.16.4 
-#RUN pip3 install torch==1.2.0 torchvision==0.4.0 -f https://download.pytorch.org/whl/torch_stable.html
+RUN pip3 install torch==1.2.0 torchvision==0.4.0 -f https://download.pytorch.org/whl/torch_stable.html
 RUN pip3 install tensorflow-gpu==1.14.0
 RUN pip3 install keras
 RUN pip3 install psutil
