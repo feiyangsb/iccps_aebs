@@ -5,7 +5,6 @@ import torch
 from routines.network import VAEPerceptionNet
 from scipy import stats
 try:
-    sys.path.append(os.environ["CARLA_PYTHON"])
     import carla
     from carla import Image
 except:

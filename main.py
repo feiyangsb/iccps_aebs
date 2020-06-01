@@ -1,6 +1,4 @@
 import os
-os.environ["CARLA_SERVER"] = os.path.abspath("../CarlaUE4.sh")
-
 import argparse
 from routines.engines.server_manager import ServerManagerBinary
 from routines.engines.setup_world import SetupWorld
@@ -41,7 +39,7 @@ if __name__ == '__main__':
             time_step = 0
             while True:
                 a = agent.getAction(s, epsilon)
-                s_, r, done, _, _, _= env.step(a[0][0])
+                s_, r, done= env.step(a[0][0])
                 s_ = input_preprocessor(s_)
                 if args.testing is False:
                     agent.storeTrajectory(s, a, r, s_, done)

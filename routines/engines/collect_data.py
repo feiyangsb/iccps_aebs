@@ -3,7 +3,6 @@ import sys
 import csv
 
 try:
-    sys.path.append(os.environ["CARLA_PYTHON"])
     from carla import Image
 except:
     raise Exception('No CARLA module found.')

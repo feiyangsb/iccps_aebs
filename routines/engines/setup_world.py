@@ -17,7 +17,6 @@ import cv2
 
 
 try:
-    sys.path.append(os.environ["CARLA_PYTHON"])
     import carla
     from carla import Transform, Location, Rotation
 except:

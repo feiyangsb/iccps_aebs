@@ -4,7 +4,6 @@ import sys
 import os
 
 try:
-    sys.path.append(os.environ["CARLA_PYTHON"])
     import carla
 except:
     raise Exception('No CARLA module found.')
