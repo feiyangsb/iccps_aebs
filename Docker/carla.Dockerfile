@@ -1,4 +1,4 @@
-FROM carlasim/carla:0.9.6 
+FROM carlasim/carla:0.9.9
 LABEL maintainer "Feiyang Cai <feiyang.cai@vanderbilt.edu>"
 
 USER root

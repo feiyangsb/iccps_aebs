@@ -44,7 +44,7 @@ class SetupWorld():
         self.world.apply_settings(settings)
         weather_parameter = p0
         weather = carla.WeatherParameters(
-            cloudyness = 80.0, 
+            cloudiness = 80.0, 
             precipitation = weather_parameter, 
             precipitation_deposits = weather_parameter,
             sun_altitude_angle = 70.0
@@ -98,7 +98,7 @@ class SetupWorld():
             velocity = self.ego_vehicle.get_velocity().y
             weather_parameter = p0# + float(self.step_count)/2.0
             weather = carla.WeatherParameters(
-                cloudyness = 80.0, 
+                cloudiness = 80.0, 
                 precipitation = weather_parameter,#0.0 + self.episode_count*1.0, 
                 precipitation_deposits = weather_parameter,# + self.episode_count*1.0,
                 sun_altitude_angle = 70.0
@@ -190,7 +190,7 @@ class SetupWorld():
         else:
             weather_parameter = self.p0 + self.rate*(self.step_count-self.t0)# + float(self.step_count)/2.0
         weather = carla.WeatherParameters(
-            cloudyness = 80.0, 
+            cloudiness = 80.0, 
             precipitation = weather_parameter,#0.0 + self.episode_count*1.0, 
             precipitation_deposits = weather_parameter,# + self.episode_count*1.0,
             sun_altitude_angle = 70.0
