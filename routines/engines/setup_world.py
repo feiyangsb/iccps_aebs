@@ -167,19 +167,10 @@ class SetupWorld():
         groundtruth_distance = self.dist_calc.getTrueDistance()
         distance = groundtruth_distance
         if groundtruth_distance < 110.0 and self.perception is not None:
-            regression_distance, p_list_1 = self.dist_calc.getRegressionDistance(image)
-            attack_distance, p_list_2 = self.dist_calc.getAttackDistance(image)
-            print("Groundtruth distance: {}, Regression distance: {}, Error: {}, Attack distance: {}".format(groundtruth_distance, regression_distance, abs(regression_distance-groundtruth_distance), attack_distance))
-            if self.step_count > self.attack_start:
-                distance = 100.0#attack_distance
-                attack_flag = 1
-                p_list = p_list_2
-                #print(p_list_1)
-            else:
-                distance = regression_distance
-                attack_flag = 0
-                p_list = p_list_1
-                #print(p_list)
+            regression_distance = self.dist_calc.getRegressionDistance(image)
+            #attack_distance, p_list_2 = self.dist_calc.getAttackDistance(image)
+            print("Groundtruth distance: {}, Regression distance: {}, Error: {}".format(groundtruth_distance, regression_distance, abs(regression_distance-groundtruth_distance)))
+            distance = regression_distance
             #print("--------")
             #distance = regression_distance
 
